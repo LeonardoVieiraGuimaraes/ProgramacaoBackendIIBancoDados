@@ -43,7 +43,8 @@ app.use(express.json());
 // O primeiro argumento para 'use' é o caminho base para as rotas. Todas as rotas definidas no módulo 'livroRotas' serão prefixadas com '/index/livros'.
 // Por exemplo, se 'livroRotas' define uma rota para '/:id', a rota completa será '/index/livros/:id'.
 // O segundo argumento para 'use' é o middleware a ser adicionado. Neste caso, estamos adicionando 'livroRotas', que é o módulo de rotas de livros que importamos anteriormente.
-app.use("/index/livros", livroRotas);
+// app.use("/index/livros", livroRotas);
+app.use("/", livroRotas);
 
 // Inicia o servidor para escutar as solicitações na porta especificada. Quando o servidor começa a escutar solicitações, a função de callback é chamada.
 app.listen(PORT, () => {
