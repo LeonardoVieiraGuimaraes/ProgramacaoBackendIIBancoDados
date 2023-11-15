@@ -3,12 +3,12 @@ const dadosServicos = require("../services/dadosServicos");
 
 // Definindo uma função assíncrona 'ListarTodos' que será exportada deste módulo.
 // Esta função é um controlador que lida com as requisições HTTP para listar todos os livros.
-exports.ListarTodos = async (req, res) => {
+exports.listarLivros = async (req, res) => {
   // Iniciando um bloco try...catch para capturar erros que podem ocorrer durante a execução do código dentro do bloco try.
   try {
     // Chamando a função 'listarTodos' do módulo 'dadosServicos' e esperando a Promise resolver.
     // A função 'listarTodos' provavelmente busca todos os livros do banco de dados ou de uma API.
-    const livros = await dadosServicos.listarTodos();
+    const livros = await dadosServicos.listarLivros();
 
     // Enviando uma resposta JSON com os livros obtidos e uma mensagem de status.
     // O método 'json' do objeto de resposta 'res' é usado para enviar uma resposta JSON.

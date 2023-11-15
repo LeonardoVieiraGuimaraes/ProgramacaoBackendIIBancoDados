@@ -4,7 +4,7 @@ const express = require("express");
 // Importando o módulo de controladores de livros
 
 const {
-  ListarTodos,
+  listarLivros,
   inserirLivro,
   listarLivroID,
   atualizarLivro,
@@ -15,7 +15,7 @@ const {
 const rotas = express.Router();
 
 // Definindo a rota para listar todos os livros
-rotas.route("/").get(ListarTodos).post(inserirLivro);
+rotas.route("/").get(listarLivros).post(inserirLivro);
 rotas.route("/:id").get(listarLivroID).put(atualizarLivro).delete(removerLivro);
 
 // // Definindo a rota para inserir um novo livro
