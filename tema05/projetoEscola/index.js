@@ -1,3 +1,10 @@
+// Importando o módulo de rotas de livros.
+// O método 'require' é usado para importar módulos em Node.js.
+// Neste caso, estamos importando o módulo de rotas de livros, que define as rotas HTTP para operações relacionadas aos livros.
+// O caminho para o módulo é relativo ao arquivo atual, então './router/livroRotas' se refere ao arquivo 'livroRotas.js' na pasta 'router' no mesmo diretório que o arquivo atual.
+// O módulo importado é então atribuído à constante 'livroRotas', que pode ser usada para acessar as rotas definidas no módulo.
+const livroRotas = require("./router/livroRotas");
+
 // Importa o módulo 'express'. Express é um framework para Node.js que simplifica o desenvolvimento de aplicações web.
 const express = require("express");
 
@@ -31,10 +38,18 @@ mongoose
 // Adiciona o middleware de análise de JSON ao pipeline de processamento de solicitações da aplicação Express. Isso permite que a aplicação Express processe corpos de solicitações JSON.
 app.use(express.json());
 
+// O método 'use' do objeto 'app' do Express é usado para adicionar middleware ao pipeline de processamento de requisições.
+// Neste caso, estamos adicionando as rotas de livros como middleware.
+// O primeiro argumento para 'use' é o caminho base para as rotas. Todas as rotas definidas no módulo 'livroRotas' serão prefixadas com '/index/livros'.
+// Por exemplo, se 'livroRotas' define uma rota para '/:id', a rota completa será '/index/livros/:id'.
+// O segundo argumento para 'use' é o middleware a ser adicionado. Neste caso, estamos adicionando 'livroRotas', que é o módulo de rotas de livros que importamos anteriormente.
+app.use("/index/livros", livroRotas);
+
 // Inicia o servidor para escutar as solicitações na porta especificada. Quando o servidor começa a escutar solicitações, a função de callback é chamada.
 app.listen(PORT, () => {
   // Imprime uma mensagem no console para indicar que o servidor está rodando e em qual porta ele está escutando.
   console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`http://localhost:${PORT}`);
 });
 
 // Vamos a alguns pontos importantes das linhas de código da página index.js que constam na figura anterior.
