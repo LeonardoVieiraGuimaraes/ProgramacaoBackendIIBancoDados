@@ -3,3 +3,5 @@ NODE.JS: HISTÓRIA E CONCEITOS BÁSICOS
 Instalar o nodejs no site
 
 node -v #veriricar versão
+
+npm -v #veririca a versão do npm repositório

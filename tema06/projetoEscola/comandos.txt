@@ -13,3 +13,7 @@ nodemon -v
 nodemon app.js
 
 npm install --save mysql2
+
+npm install --save sequelize
+
+npm install --save express-handlebars
