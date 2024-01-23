@@ -45,3 +45,10 @@ Certo:
 var notaMat23
 var endAluno
 
+// Camel Case
+var nomeAluno
+
+// Snake Case
+var nome_aluno
+
+

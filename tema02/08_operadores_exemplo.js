@@ -48,3 +48,33 @@ if (a > b && a > c) {
   // Se a condição for falsa, imprime "a não é o maior número" no console
   console.log("a não é o maior número");
 }
+
+// Imprime "Atribuição" no console
+
+// Declara a variável 'a' e atribui o valor 5 a ela
+
+// Subtrai 1 do valor de 'a'
+
+// Imprime o valor de 'a' no console
+
+// Imprime "Aritmético" no console
+
+// Eleva 'a' ao quadrado e atribui o resultado à variável 'b'
+
+// Soma 'a' e 'b' e atribui o resultado à variável 'c'
+
+// Imprime o valor de 'b' no console
+
+// Imprime o valor de 'c' no console
+
+// Imprime "Relacional" no console
+
+// Verifica se 'a' é maior ou igual a 'b'
+// Se a condição for verdadeira, imprime "a é maior ou igual a b" no console
+// Se a condição for falsa, imprime "a é menor que b" no console
+
+// Imprime "Lógico" no console
+
+// Verifica se 'a' é maior que 'b' e 'a' é maior que 'c'
+// Se a condição for verdadeira, imprime "a é o maior número" no console
+// Se a condição for falsa, imprime "a não é o maior número" no console

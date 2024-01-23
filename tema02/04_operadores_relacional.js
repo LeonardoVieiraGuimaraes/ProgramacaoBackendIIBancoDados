@@ -10,7 +10,7 @@ console.log(a == c); // Saída: true
 // Diferente de
 console.log(a != b); // Saída: true
 
-// Estritamente igual a
+// Estritamente igual a - ele retorna true se os valores forem iguais em termos de valor e tipo, e false caso contrário
 console.log(a === c); // Saída: false
 
 // Estritamente diferente de
