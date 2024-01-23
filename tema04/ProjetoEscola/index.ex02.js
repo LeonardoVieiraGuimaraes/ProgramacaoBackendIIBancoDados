@@ -18,12 +18,12 @@ const servidor = http.createServer((request, response) => {
     response.write("<h1>Bem vindo! Teste executado com sucesso!</h1>");
   }
   // Se a URL for '/rota1', envia uma mensagem informando que a rota 1 foi acessada
-  else if (request.url === "/rota1") {
-    response.write("<h1>Voce acesso a rota 1</h1>");
+  else if (request.url === "/rota01") {
+    response.write("<h1>Você acessou a rota 1</h1>");
   }
   // Se a URL for '/rota2', envia uma mensagem informando que a rota 2 foi acessada
-  if (request.url === "/rota2") {
-    response.write("<h1>Voce acesso a rota 2</h1>");
+  if (request.url === "/rota02") {
+    response.write("<h1>Você acessou a rota 2</h1>");
   }
   // Sinaliza ao servidor que todos os cabeçalhos e corpo da resposta foram enviados
   response.end();

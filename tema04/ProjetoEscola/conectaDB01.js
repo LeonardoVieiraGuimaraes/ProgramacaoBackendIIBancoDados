@@ -1,4 +1,5 @@
 // Declara uma função assíncrona chamada 'conecta'
+// Uma função assíncrona em programação permite que o programa execute outras tarefas enquanto espera a conclusão de uma operação assíncrona. Em JavaScript, a palavra-chave async é usada para declarar uma função assíncrona.
 const conecta = async () => {
   // Verifica se a conexão global já existe e se seu estado não é "disconnected" (desconectado)
   // Se essas condições forem verdadeiras, a função retorna a conexão existente
@@ -10,17 +11,19 @@ const conecta = async () => {
   const mysql = require("mysql2/promise");
 
   // Cria uma nova conexão com o banco de dados MySQL
-  // A string de conexão é 'mysql://root:root@localhost:3306/escola', que conecta como o usuário 'root' com a senha 'root' ao banco de dados 'escola' no host 'localhost' na porta 3306
-  const con = await mysql.createConnection(
-    "mysql://root:@localhost:3306/escola"
 
-    // const con = await mysql.createConnection({
-    //   host: 'localhost',
-    //   user: 'root',
-    //   password: 'password',
-    //   database: 'database_name'
-    // });
-  );
+  // A string de conexão é 'mysql://root:root@localhost:3306/escola', que conecta como o usuário 'root' com a senha 'root' ao banco de dados 'escola' no host 'localhost' na porta 3306
+  // const con = await mysql.createConnection(
+  //   "mysql://root:@localhost:3306/escola"
+
+  // await é usada para pausar a execução até que uma operação assíncrona (geralmente uma Promise) seja concluída. Isso facilita a escrita de código mais eficiente, especialmente quando lidamos com operações que levam tempo, como leitura de arquivos, chamadas de API, ou espera por eventos.
+
+  const con = await mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "270414",
+    database: "escola",
+  });
 
   // Imprime uma mensagem no console indicando que a conexão com o MySQL foi estabelecida
   console.log("Conectou no MySQL!");

@@ -16,6 +16,8 @@ http
   // Faz o servidor escutar na porta 1010
   .listen(1010);
 
+console.log("Servidor rodando em http://localhost:1010/");
+
 //   O status 200 é um código de status HTTP que indica que a requisição foi processada com sucesso. Especificamente, o código 200 significa "OK" e é a resposta padrão para requisições HTTP bem-sucedidas. Quando um servidor retorna esse código, geralmente também envia de volta os dados solicitados.
 
 // Linha 1: criamos uma constante com o nome http e informamos que será feita uma requisição do tipo http.

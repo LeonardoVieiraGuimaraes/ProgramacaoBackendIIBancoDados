@@ -11,7 +11,13 @@
   // Se houvesse uma operação assíncrona, como uma chamada de API ou uma leitura de arquivo, a função esperaria a operação ser concluída antes de retornar
 
   console.log("Alunos Cadastrados no Banco de Dados");
-
   const alunos = await db.todosAlunos();
   console.log(alunos);
+
+  console.log("Realizando Cadastro de Alunos");
+  await db.inserirAluno({
+    nome: "Leonardo Vieira Guimarães",
+    turma: "BD",
+    telefone: "99999999",
+  });
 })();

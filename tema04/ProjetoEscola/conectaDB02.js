@@ -15,10 +15,16 @@ const conecta = async () => {
   // Cria uma nova conexão com o banco de dados MySQL
   // A string de conexão é 'mysql://root:@localhost:3306/escola', que conecta como o usuário 'root' sem senha ao banco de dados 'escola' no host 'localhost' na porta 3306
   // A função 'createConnection' retorna uma Promise que é resolvida quando a conexão é estabelecida
-  const con = await mysql.createConnection(
-    "mysql://root:@localhost:3306/escola"
-  );
+  // const con = await mysql.createConnection(
+  //   "mysql://root:@localhost:3306/escola"
+  // );
 
+  const con = await mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "270414",
+    database: "escola",
+  });
   // Imprime uma mensagem no console indicando que a conexão com o MySQL foi estabelecida
   // Isso é útil para fins de depuração e para confirmar que a conexão foi estabelecida com sucesso
   console.log("Conectou no MySQL!");
