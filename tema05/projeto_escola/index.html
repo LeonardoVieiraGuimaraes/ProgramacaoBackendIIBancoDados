@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Importando o CSS do Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Inserir Livro</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Inserir Livro</h1>
+      <form action="/" method="POST" id="inserirLivroForm" class="mt-4">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input
+            type="number"
+            class="form-control"
+            id="id"
+            placeholder="Insira o ID do livro"
+          />
+        </div>
+        <div class="form-group">
+          <label for="nomeLivro">Nome do Livro</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nomeLivro"
+            placeholder="Insira o nome do livro"
+          />
+        </div>
+        <div class="form-group">
+          <label for="autores">Autores</label>
+          <input
+            type="text"
+            class="form-control"
+            id="autores"
+            placeholder="Insira os autores do livro"
+          />
+        </div>
+        <div class="form-group">
+          <label for="anoPublicacao">Ano de Publicação</label>
+          <input
+            type="number"
+            class="form-control"
+            id="anoPublicacao"
+            placeholder="Insira o ano de publicação do livro"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Inserir</button>
+      </form>
+    </div>
+
+    <!-- Importando o JavaScript do Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

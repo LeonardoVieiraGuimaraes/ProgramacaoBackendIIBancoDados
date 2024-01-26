@@ -1,0 +1,9 @@
+{
+    "id": 1,
+    "nomeLivro": "O Nome do Vento",
+    "autores": ["Patrick Rothfuss"],
+    "anoPublicacao": 2007,
+    "editora": "Editora XYZ",
+    "estadoPublicacao": "São Paulo",
+    "numeroPaginas": 662
+  }

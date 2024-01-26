@@ -12,7 +12,10 @@ function soma(num1, num2) {
 }
 
 // Declara a variável 'res' e atribui a ela o resultado da chamada da função 'soma' com os argumentos 3 e 8
-var res = soma(3, 8);
+
+let a = 3,
+  b = 8;
+var res = soma(a, b);
 
 // Imprime a concatenação da string "Resultado: " com o valor de 'res' no console
-console.log("Resultado: " + res);
+console.log("Resultado da soma : " + a + " com " + b + " é " + res);
