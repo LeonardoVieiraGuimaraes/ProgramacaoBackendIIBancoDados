@@ -1,7 +1,7 @@
 {
-    "id": 1,
+    "_id": 1,
     "nomeLivro": "O Nome do Vento",
-    "autores": ["Patrick Rothfuss"],
+    "autores": "Patrick Rothfuss",
     "anoPublicacao": 2007,
     "editora": "Editora XYZ",
     "estadoPublicacao": "São Paulo",

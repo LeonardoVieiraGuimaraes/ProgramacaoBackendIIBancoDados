@@ -1,0 +1,9 @@
+npm init -y
+
+npm i express
+npm i nodemon
+npm i mysql
+
+ "type": "module",
+
+"start": "nodemon index.js",

@@ -21,7 +21,7 @@ const conecta = async () => {
   const con = await mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "270414",
+    // password: "270414",
     database: "escola",
   });
 
@@ -144,7 +144,7 @@ const consultarAluno = async (id) => {
   const [rows] = await con.query(sqlConsulta, dados);
 
   // Fechar a conexão com o banco de dados
-  //   con.end();
+  con.end();
 
   // Retorna o aluno recuperado
   return rows[0];

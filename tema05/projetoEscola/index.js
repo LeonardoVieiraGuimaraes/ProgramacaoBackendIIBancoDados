@@ -24,6 +24,7 @@ const app = express();
 // O segundo argumento para 'connect' é um objeto de opções
 // 'useNewUrlParser: true' diz ao Mongoose para usar o novo analisador de URL do MongoDB, que é mais atualizado e tem melhor desempenho
 // 'useUnifiedTopology: true' diz ao Mongoose para usar o novo mecanismo de gerenciamento de conexão do MongoDB, que é mais atualizado e tem melhor desempenho
+
 mongoose
   .connect(process.env.MOMGO_URL || "mongodb://localhost:27017/Biblioteca")
   // A função 'connect' retorna uma Promise
@@ -43,7 +44,7 @@ app.use(express.json());
 // O primeiro argumento para 'use' é o caminho base para as rotas. Todas as rotas definidas no módulo 'livroRotas' serão prefixadas com '/index/livros'.
 // Por exemplo, se 'livroRotas' define uma rota para '/:id', a rota completa será '/index/livros/:id'.
 // O segundo argumento para 'use' é o middleware a ser adicionado. Neste caso, estamos adicionando 'livroRotas', que é o módulo de rotas de livros que importamos anteriormente.
-// app.use("/index/livros", livroRotas);
+
 app.use("/", livroRotas);
 
 // Inicia o servidor para escutar as solicitações na porta especificada. Quando o servidor começa a escutar solicitações, a função de callback é chamada.
@@ -53,7 +54,21 @@ app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
 
-// Vamos a alguns pontos importantes das linhas de código da página index.js que constam na figura anterior.
-// Linha 1: criamos uma constante com o nome express. Depois, fazemos uma requisição importando-o. Repetimos esse processo na linha 2.
-// Linha 3: após criar a constante PORT, definimos a porta a ser usada. Neste exemplo, a porta 4123.
-// Linha 8: exibiremos uma mensagem que mostrará o nome da porta que está sendo utilizada.
+// // Vamos a alguns pontos importantes das linhas de código da página index.js que constam na figura anterior.
+// // Linha 1: criamos uma constante com o nome express. Depois, fazemos uma requisição importando-o. Repetimos esse processo na linha 2.
+// // Linha 3: após criar a constante PORT, definimos a porta a ser usada. Neste exemplo, a porta 4123.
+// // Linha 8: exibiremos uma mensagem que mostrará o nome da porta que está sendo utilizada.
+// const Livro = require("./models/dados");
+// const Servico = require("./services/dadosServicos");
+
+// const novoLivro = new Livro({
+//   id: 2,
+//   nomeLivro: "O Senhor dos Anéis",
+//   autores: "J.R.R. Tolkien",
+//   anoPublicacao: 1954,
+//   editora: "Editora X",
+//   estadoPublicacao: "Publicado",
+//   numeroPaginas: 1200,
+// });
+
+// Servico.inserirLivros(novoLivro);

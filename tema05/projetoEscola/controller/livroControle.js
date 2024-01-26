@@ -8,6 +8,7 @@ exports.listarLivros = async (req, res) => {
   try {
     // Chamando a função 'listarTodos' do módulo 'dadosServicos' e esperando a Promise resolver.
     // A função 'listarTodos' provavelmente busca todos os livros do banco de dados ou de uma API.
+
     const livros = await dadosServicos.listarLivros();
 
     // Enviando uma resposta JSON com os livros obtidos e uma mensagem de status.
@@ -29,6 +30,7 @@ exports.inserirLivro = async (req, res) => {
   // Obtendo o novo livro do corpo da requisição.
   // O corpo da requisição é onde os dados enviados com a requisição são armazenados.
   // Neste caso, espera-se que o corpo da requisição contenha os dados do novo livro.
+
   const novoLivro = req.body;
 
   // Iniciando um bloco try...catch para capturar erros que podem ocorrer durante a execução do código dentro do bloco try.
@@ -36,7 +38,7 @@ exports.inserirLivro = async (req, res) => {
     // Chamando a função 'inserirLivro' do módulo 'dadosServicos' e esperando a Promise resolver.
     // A função 'inserirLivro' provavelmente insere o novo livro no banco de dados ou em uma API.
     // O novo livro é passado como argumento para a função 'inserirLivro'.
-    const livro = await dadosServicos.inserirLivro(novoLivro);
+    const livro = await dadosServicos.inserirLivros(novoLivro);
 
     // Enviando uma resposta JSON com o livro inserido e uma mensagem de status.
     // O método 'json' do objeto de resposta 'res' é usado para enviar uma resposta JSON.

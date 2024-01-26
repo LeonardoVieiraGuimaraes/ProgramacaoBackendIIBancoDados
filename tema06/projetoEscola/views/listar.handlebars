@@ -1,0 +1,21 @@
+<h3>Alunos Cadastrados</h3>
+
+{{#each listarTodos}}
+Matricula: {{matricula}}<br>
+Nome: {{nome}}<br>
+CPF: {{cpf}}<br>
+RG: {{rg}}<br>
+{{/each}}
+
+
+
+{{#each listarTodos}}
+Código: {{id}}<br>
+Matricula: {{matricula}}<br>
+Nome: {{nome}}<br>
+CPF: {{cpf}}<br>
+RG: {{rg}}<br>
+<a href="excluir-aluno/{{id}}"><button> Excluir</button></a>
+<a href="editar-aluno/{{id}}"> <button>Alterar</button></a><br>
+{{/each}}
+

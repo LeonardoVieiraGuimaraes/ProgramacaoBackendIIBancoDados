@@ -5,8 +5,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Criando um novo Schema para os livros. Cada livro terá um id, nome, autores, ano de publicação, editora, estado de publicação e número de páginas.
-const livroSchema = new Schema({
-  id: Number, // O campo id é um número que identifica unicamente cada livro.
+const LivroSchema = new Schema({
   nomeLivro: String, // O campo nomeLivro é uma string que armazena o nome do livro.
   autores: String, // O campo autores é uma string que armazena os nomes dos autores do livro.
   anoPublicacao: Number, // O campo anoPublicacao é um número que armazena o ano de publicação do livro.
@@ -16,4 +15,4 @@ const livroSchema = new Schema({
 });
 
 // Exportando o modelo de livro. Este modelo será usado para criar, ler, atualizar e deletar documentos na coleção de livros do MongoDB.
-module.exports = mongoose.model("Livros", livroSchema);
+module.exports = mongoose.model("Livros", LivroSchema);

@@ -1,19 +1,25 @@
-<form action="/adicionar-aluno" method="post">
-  <div class="form-group">
-    <label for="matricula">Matrícula</label>
-    <input type="text" class="form-control" id="matricula" name="matricula" placeholder="Insira a matrícula">
-  </div>
-  <div class="form-group">
-    <label for="nome">Nome</label>
-    <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira o nome">
-  </div>
-  <div class="form-group">
-    <label for="cpf">CPF</label>
-    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Insira o CPF">
-  </div>
-  <div class="form-group">
-    <label for="rg">RG</label>
-    <input type="text" class="form-control" id="rg" name="rg" placeholder="Insira o RG">
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
-</form>
+<form action="/adicionar-aluno" method="post"> <!-- Inicia um formulário HTML que, quando enviado, fará uma requisição POST para a rota "/adicionar-aluno" -->
+
+  <div class="form-group"> <!-- Inicia um grupo de formulário, para agrupar elementos de formulário relacionados e aplicar estilos -->
+    <label for="matricula">Matrícula</label> <!-- Define um rótulo para o campo de entrada de matrícula -->
+    <input type="text" class="form-control" id="matricula" name="matricula" placeholder="Insira a matrícula"> <!-- Define um campo de entrada de texto para a matrícula -->
+  </div> <!-- Fecha o grupo de formulário -->
+
+  <div class="form-group"> <!-- Inicia outro grupo de formulário -->
+    <label for="nome">Nome</label> <!-- Define um rótulo para o campo de entrada de nome -->
+    <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira o nome"> <!-- Define um campo de entrada de texto para o nome -->
+  </div> <!-- Fecha o grupo de formulário -->
+
+  <div class="form-group"> <!-- Inicia outro grupo de formulário -->
+    <label for="cpf">CPF</label> <!-- Define um rótulo para o campo de entrada de CPF -->
+    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Insira o CPF"> <!-- Define um campo de entrada de texto para o CPF -->
+  </div> <!-- Fecha o grupo de formulário -->
+
+  <div class="form-group"> <!-- Inicia outro grupo de formulário -->
+    <label for="rg">RG</label> <!-- Define um rótulo para o campo de entrada de RG -->
+    <input type="text" class="form-control" id="rg" name="rg" placeholder="Insira o RG"> <!-- Define um campo de entrada de texto para o RG -->
+  </div> <!-- Fecha o grupo de formulário -->
+
+  <button type="submit" class="btn btn-primary">Enviar</button> <!-- Define um botão de envio para o formulário -->
+
+</form> <!-- Fecha a tag do formulário -->

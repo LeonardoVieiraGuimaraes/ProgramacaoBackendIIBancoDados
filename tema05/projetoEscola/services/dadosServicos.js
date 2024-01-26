@@ -3,7 +3,7 @@
 // Neste caso, estamos importando o módulo 'dados' que está localizado na pasta 'models' que é um diretório acima do arquivo atual (indicado pelo '../' no início do caminho).
 // O módulo 'dados' provavelmente define a estrutura dos dados que serão usados em nossa aplicação, geralmente através de um esquema Mongoose se estivermos trabalhando com MongoDB.
 // O módulo importado é então atribuído à constante 'dadosModelo', que pode ser usada para acessar as funções e propriedades exportadas pelo módulo 'dados'.
-const dadosModelo = require("../models/dados.js");
+const dadosModelo = require("../models/dados");
 
 // Definindo a função assíncrona 'ListarLivros' que retorna todos os livros do banco de dados.
 // A função 'find' do Mongoose é usada para encontrar todos os documentos na coleção que correspondem à condição fornecida.
@@ -22,7 +22,7 @@ exports.inserirLivros = async (dados) => {
 // Definindo a função assíncrona 'listarLivrosID' que retorna um livro específico do banco de dados pelo seu ID.
 // A função 'findById' do Mongoose é usada para encontrar um documento na coleção pelo seu ID.
 // A função 'findById' recebe o ID do livro como argumento.
-exports.listarLivrosID = async (id) => {
+exports.listarLivroID = async (id) => {
   return await dadosModelo.findById(id);
 };
 

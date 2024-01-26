@@ -17,3 +17,10 @@ Abra o arquivo package.json e acrescente o código que aparece na linha 7, confo
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+
+"main": "index.js",
+"type": "module",
+
+
+
+    "anoPublicacao": 2007
