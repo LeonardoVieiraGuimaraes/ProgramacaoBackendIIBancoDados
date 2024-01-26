@@ -11,6 +11,7 @@ app.post("/alunos", async (req, res) => {
   const aluno = req.body;
   // Define a consulta SQL para inserir um novo aluno
   const sql = "INSERT INTO alunos SET ?";
+  // a try e catch,  são blocos utilizados em muitas linguagens de programação, incluindo JavaScript, para lidar com exceções e erros.
   try {
     // Executa a consulta SQL, passando os dados do novo aluno como parâmetro
     const [resultado] = await conexao.query(sql, aluno);
