@@ -1,9 +1,27 @@
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 
 // indicar para o express ler body com json
 app.use(express.json());
+
+// Indica para o Express que os arquivos estáticos serão servidos a partir da pasta 'src'
+app.use(express.static(path.join(__dirname, "src")));
+// Middleware para analisar application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
+// Rota GET para a página inicial
+app.get("/", (req, res) => {
+  // Envia o arquivo index.html como a resposta para a requisição
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// ... restante do código ...
 
 // Rota POST para criar um novo aluno
 app.post("/alunos", async (req, res) => {

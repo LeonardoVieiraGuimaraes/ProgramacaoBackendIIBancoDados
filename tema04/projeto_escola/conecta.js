@@ -9,6 +9,7 @@ const dbConfig = {
   user: "root", // O nome de usuário para se conectar ao banco de dados.
   database: "escola", // O nome do banco de dados ao qual se conectar.
   port: 3306, // A porta na qual o servidor do banco de dados está escutando.
+  // password: "270414", // A senha do usuário para se conectar ao banco de dados.
 };
 
 // A função 'conecta' é usada para estabelecer uma conexão com o banco de dados.
