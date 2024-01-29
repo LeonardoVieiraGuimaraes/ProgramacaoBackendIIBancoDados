@@ -27,6 +27,68 @@ Além disso, os escopos podem ser associados a um registro específico, permitin
 
 Por padrão, quando você publica um pacote com um escopo que começa com @, esse pacote é tratado como privado e você deve pagar para publicá-lo no registro público do npm. No entanto, você pode publicar pacotes com escopo como públicos usando a opção --access public com o comando npm publish.
 
+O que o programador pode fazer com o npm
+
+O npm oferece uma plataforma abrangente para desenvolvedores, simplificando a incorporação de pacotes de código, o download de ferramentas independentes e a execução de pacotes com o uso do npx. Além disso, proporciona a capacidade de compartilhar código globalmente, restringir acesso a desenvolvedores específicos e criar organizações para coordenar esforços de manutenção e desenvolvimento. Com funcionalidades para formar equipes virtuais, gerenciar múltiplas versões de código e dependências, e facilitar atualizações, o npm se destaca como uma ferramenta essencial. Permite ainda a pesquisa de soluções, a identificação de colaboradores e a colaboração eficiente em projetos similares.
 
 
 
+Registro (registry) no npm: Colaboração Eficiente e Configuração Flexível
+
+O registro npm é um banco de dados de pacotes JavaScript, cada um contendo software e metadados. Desenvolvedores de código aberto e empresas utilizam esse registro para contribuir com pacotes para a comunidade ou membros de suas organizações, além de baixar e integrar pacotes em seus projetos.
+
+O npm padrão usa o registro público npm em https://registry.npmjs.org. O uso desse registro está sujeito aos termos disponíveis em https://docs.npmjs.com/policies/terms (NPM, 2023). Entretanto, é possível configurar o npm para utilizar outros registros ou até mesmo criar registros personalizados, desde que sejam compatíveis com o npm.
+
+Nos comandos do CLI, veremos como configurar o registro no pacote da sua aplicação, oferecendo flexibilidade na escolha do registro e promovendo uma colaboração eficiente no ecossistema npm.
+
+Pacotes no npm: Essenciais para Desenvolvimento Eficiente
+
+De acordo com o npm (2023), um pacote no contexto do npm é um arquivo ou diretório descrito por um arquivo package.json. Este arquivo contém configurações vitais, como informações do projeto, scripts e controle de versão de bibliotecas gerenciadas pelo npm. O comando npm init cria o package.json.
+
+Pacotes podem ser representados por pastas, tarballs comprimidos, URLs resolvíveis, e até mesmo por nome, versão ou tags específicas. Podem ser públicos, disponíveis para a comunidade, ou privados, com acesso restrito.
+
+Os pacotes privados podem ter escopo de usuário, acessíveis apenas ao criador e colaboradores, ou escopo de organização, permitindo acesso a equipes específicas. Essa diversidade de formatos e permissões oferece flexibilidade no compartilhamento de código, adaptando-se a ambientes colaborativos ou restritos.
+
+
+
+npm help
+
+npm help npm
+
+npm help install
+
+npm -l
+
+
+npm login
+
+npm ping
+
+npm logout
+
+npm install
+
+npm remove
+
+npm init
+
+npm init --yes
+
+npm outdated
+
+npm update
+
+npm publish
+
+npm login --scope=@leoproti
+
+npm install @leoproti/tema08
+
+
+npm ci
+
+npm update
+
+npm audit
+
+npm audit --fix
