@@ -1,0 +1,14 @@
+Pratica para 
+node init -y
+
+npm install formidable,
+
+npm install express
+
+node .\main.js --a=5 --b=100
+npm init -y
+
+npm install minimist
+
+
+node ModuloLocal2 --a=62 --b=47 

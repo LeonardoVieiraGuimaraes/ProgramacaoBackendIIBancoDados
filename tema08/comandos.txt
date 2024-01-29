@@ -1,0 +1,32 @@
+o site: https://www.npmjs.com/
+CLI é propriamente a ferramenta de execução dos comandos.
+o registro é um grande banco de dados público de software JavaScript e de metainformações correspondentes.
+
+cadastro no site feito
+
+agora veririficar a versão no node -- node -v e npm -v
+
+npm install -g npm
+
+npm install: Este é o comando que o npm usa para instalar pacotes.
+
+-g: Esta é uma opção que diz ao npm para instalar o pacote globalmente. Quando você instala um pacote globalmente, ele não é instalado no diretório local node_modules, mas sim em um diretório global que o Node.js usa para armazenar pacotes globais. Isso significa que o pacote estará disponível para todos os projetos em seu sistema.
+
+npm: Este é o nome do pacote que você deseja instalar. Neste caso, você está instalando o próprio npm, que é um pouco meta, mas faz sentido quando você percebe que o npm é apenas outro pacote que pode ser gerenciado pelo npm.
+
+Escopo
+
+@npm/package-name
+No contexto do npm, um escopo é uma maneira de agrupar pacotes relacionados juntos. Ele é definido por um prefixo no nome do pacote e é separado por uma barra (/).
+
+Por exemplo, no pacote @npm/package-name, @npm é o escopo.
+
+Escopos são especialmente úteis para grandes projetos ou organizações, pois permitem que você agrupe pacotes relacionados juntos sob um mesmo nome, evitando conflitos de nomes com pacotes não relacionados.
+
+Além disso, os escopos podem ser associados a um registro específico, permitindo que você instale pacotes privados a partir de um registro privado enquanto ainda usa o registro público do npm para pacotes públicos.
+
+Por padrão, quando você publica um pacote com um escopo que começa com @, esse pacote é tratado como privado e você deve pagar para publicá-lo no registro público do npm. No entanto, você pode publicar pacotes com escopo como públicos usando a opção --access public com o comando npm publish.
+
+
+
+

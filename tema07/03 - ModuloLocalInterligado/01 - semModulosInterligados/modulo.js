@@ -15,6 +15,13 @@ soma(2, 5);
 // Chama a função multiplica()
 multiplica(2, 5);
 // Função soma() realiza e apresenta a soma de dois números inteiros
+
+// Chama a função soma()
+soma(a, b);
+// Chama a função multiplica()
+multiplica(a, b);
+// Função soma() realiza e apresenta a soma de dois números inteiros
+
 function soma(a, b) {
   console.log(a + b);
 }

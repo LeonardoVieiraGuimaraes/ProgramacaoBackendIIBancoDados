@@ -1,8 +1,0 @@
-Pratica para 
-
-npm init -y
-
-npm install minimist
-
-
-node ModuloLocal2 --a=62 --b=47 

@@ -1,5 +1,0 @@
-node init -y
-
-npm install formidable,
-
-npm install express

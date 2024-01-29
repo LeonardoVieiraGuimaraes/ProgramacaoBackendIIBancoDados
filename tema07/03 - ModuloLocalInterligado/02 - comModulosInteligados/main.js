@@ -2,6 +2,7 @@
 const soma = require("./soma");
 // Importação do módulo multiplica.js
 const multiplica = require("./multiplica");
+
 // Importação do módulo externo minimist
 // A instalação é necessária: npm install minimist
 // O minimist é utilizado para tratamento de argumento.
@@ -16,3 +17,8 @@ const b = parseInt(args["b"]);
 soma(2, 5);
 // Chama a função multiplica() que está no módulo multiplica.js
 multiplica(2, 5);
+
+// Chama a função soma() que está no módulo soma.js
+soma(a, b);
+// Chama a função multiplica() que está no módulo multiplica.js
+multiplica(a, b);
