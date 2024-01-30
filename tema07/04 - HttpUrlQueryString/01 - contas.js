@@ -1,10 +1,10 @@
 // Importa o módulo interno HTTP para criar um servidor HTTP
 var http = require("http");
 
-// Importa o módulo interno URL para analisar URLs
+// Importa o módulo interno URL para analisar URLs, que fornece utilitários para analisar e construir URLs
 var url = require("url");
 
-// Importa o módulo interno FS (File System) para trabalhar com arquivos
+// Importa o módulo interno FS (File System) para trabalhar com arquivos, que permite interagir com o sistema de arquivos
 var fs = require("fs");
 
 // Cria um servidor HTTP

@@ -1,5 +1,5 @@
 Pratica para 
-node init -y
+npm init -y
 
 npm install formidable,
 
