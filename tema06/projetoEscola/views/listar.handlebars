@@ -1,21 +1,37 @@
+<!-- Exibe um título "Alunos Cadastrados" -->
 <h3>Alunos Cadastrados</h3>
 
+{{!-- <!-- Inicia um bloco de repetição para cada item em "listarTodos" -->
 {{#each listarTodos}}
-Matricula: {{matricula}}<br>
-Nome: {{nome}}<br>
-CPF: {{cpf}}<br>
-RG: {{rg}}<br>
-{{/each}}
+<!-- Exibe a matrícula do aluno atual -->
+Matricula: {{this.matricula}}<br>
+<!-- Exibe o nome do aluno atual -->
+Nome: {{this.nome}}<br>
+<!-- Exibe o CPF do aluno atual -->
+CPF: {{this.cpf}}<br>
+<!-- Exibe o RG do aluno atual -->
+RG: {{this.rg}}<br>
+<!-- Termina o bloco de repetição -->
+{{/each}} --}}
 
+<!-- Espaço em branco para separação visual -->
 
-
+<!-- Inicia um novo bloco de repetição para cada item em "listarTodos" -->
 {{#each listarTodos}}
-Código: {{id}}<br>
-Matricula: {{matricula}}<br>
-Nome: {{nome}}<br>
-CPF: {{cpf}}<br>
-RG: {{rg}}<br>
-<a href="excluir-aluno/{{id}}"><button> Excluir</button></a>
-<a href="editar-aluno/{{id}}"> <button>Alterar</button></a><br>
+<!-- Exibe o ID do aluno atual -->
+Código: {{this.id}}<br>
+<!-- Exibe a matrícula do aluno atual -->
+Matricula: {{this.matricula}}<br>
+<!-- Exibe o nome do aluno atual -->
+Nome: {{this.nome}}<br>
+<!-- Exibe o CPF do aluno atual -->
+CPF: {{this.cpf}}<br>
+<!-- Exibe o RG do aluno atual -->
+RG: {{this.rg}}<br>
+<!-- Exibe um link para a rota de exclusão do aluno atual -->
+<a href="excluir-aluno/{{this.id}}"><button> Excluir</button></a>
+<!-- Exibe um link para a rota de edição do aluno atual -->
+<a href="editar-aluno/{{this.id}}"> <button>Alterar</button></a><br>
+<!-- Termina o bloco de repetição -->
 {{/each}}
 

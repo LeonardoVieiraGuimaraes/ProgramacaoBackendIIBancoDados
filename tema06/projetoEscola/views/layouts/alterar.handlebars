@@ -1,13 +1,15 @@
 <h3>A1terar Aluno</h3>
-{{#each alterarlJm}}
-{{/each}}
+{{!-- {{#each alterarum}}
+{{/each}} --}}
 
-<form action - "/efetuar-alteracao" method = "post">
-<label for ="">Matricula:</label>
-<input type="text" name="txtmatriucla" id=""><br>
-<label for ="">Nome:</label>
-<input type="text" name="txtnome" id=""><br>
-<label for ="">Curso:</label>
-<input type="text" name="txtcurso" id=""><br>
-<label for ="">Turma:</label>
-<input type="text" name="txtturma" id="">
+<form action = "/efetuar-alteracao/{{alterarum.id}}" method = "post">
+    <label for ="idmatricula">Matricula:</label>
+    <input type="text" name="matricula" id="idmatricula" value="{{alterarum.matricula}}"><br>
+    <label for ="idnome">Nome:</label>
+    <input type="text" name="nome" id="idnome" value="{{alterarum.nome}}"><br>
+    <label for ="idcpf">CPF:</label>
+    <input type="text" name="cpf" id="idcpf" value="{{alterarum.cpf}}"><br>
+    <label for ="idrg">RG:</label>
+    <input type="text" name="rg" id="idrg" value="{{alterarum.rg}}"><br>
+    <button type="submit">Alterar</button>
+</form>
