@@ -89,12 +89,13 @@ app.delete("/livros/:id", async (req, res) => {
   try {
     // Deletando o livro pelo ID
     const livro = await Livro.findByIdAndDelete(req.params.id);
+
     if (!livro) {
       // Se o livro não for encontrado, enviar uma resposta com status 404 (Não Encontrado)
       res.status(404).send("Livro não encontrado");
     } else {
       // Se o livro for encontrado e deletado, enviar uma resposta com status 204 (Sem Conteúdo)
-      res.status(204).send();
+      res.status(204).send("Livro deletado com sucesso");
     }
   } catch (erro) {
     // Enviando uma resposta com status 500 (Erro Interno do Servidor) e o erro

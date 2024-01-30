@@ -1,0 +1,26 @@
+instala o Mongo DB
+
+mkdir projetoEscola
+cd projetoEscola
+npm init -y
+
+Express: esse nos auxiliará a trabalhar com requisições http.
+Mongoose: responsável por fazer a conexão com nosso banco de dados MongoDB.
+Nodemon: neste pacote, não será necessário reiniciar o nosso servidor cada vez que fizermos alguma alteração em nossos arquivos.
+
+
+npm i express mongoose nodemon
+
+
+Abra o arquivo package.json e acrescente o código que aparece na linha 7, conforme a Figura 10.
+ "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+"main": "index.js",
+"type": "module",
+
+
+
+    "anoPublicacao": 2007
