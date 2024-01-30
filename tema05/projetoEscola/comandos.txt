@@ -18,9 +18,10 @@ Abra o arquivo package.json e acrescente o código que aparece na linha 7, confo
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 
-"main": "index.js",
-"type": "module",
 
 
-
+{
+    "titulo": "O Nome do Vento",
+    "autor": "Patrick Rothfuss",
     "anoPublicacao": 2007
+  }
