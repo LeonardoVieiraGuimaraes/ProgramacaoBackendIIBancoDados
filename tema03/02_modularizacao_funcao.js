@@ -1,21 +1,20 @@
-// Ela consiste em criar módulos, ou seja, funções, para executar diferentes tarefas, as quais podem ser reutilizadas posteriormente em outros códigos, bastando chamá-las.
-
-// Declara uma função chamada 'soma' que recebe dois parâmetros: 'num1' e 'num2'
-
-// Uma função é como um programa separado do programa principal, mas que é feito dentro do próprio código e pode ser chamada nele mesmo.
-
-// As funções também podem ser reutilizadas, ou seja, chamadas várias vezes no mesmo projeto. Se você quiser usar uma função em outro projeto, precisará entrar no código onde ela foi feita para copiá-la.
-
+// A modularização é uma prática fundamental no desenvolvimento de software, que envolve a criação de módulos, ou seja, funções, para realizar tarefas específicas.
+// Declaração de uma função chamada 'soma' que recebe dois parâmetros: 'num1' e 'num2'
+// Uma função é um bloco de código projetado para realizar uma tarefa específica. Neste caso, a tarefa é somar dois números
 function soma(num1, num2) {
   // A função retorna a soma de 'num1' e 'num2'
+  // 'return' termina a execução da função e especifica um valor a ser retornado para quem chamou a função
   return num1 + num2;
 }
 
-// Declara a variável 'res' e atribui a ela o resultado da chamada da função 'soma' com os argumentos 3 e 8
-
+// Declaração de duas variáveis 'a' e 'b' e atribuição dos valores 3 e 8 a elas, respectivamente
 let a = 3,
   b = 8;
+
+// Declaração de uma variável 'res' e atribuição do resultado da chamada da função 'soma' com os argumentos 'a' e 'b' a ela
+// Aqui, a função 'soma' é chamada com 'a' e 'b' como argumentos, e o resultado é armazenado na variável 'res'
 var res = soma(a, b);
 
-// Imprime a concatenação da string "Resultado: " com o valor de 'res' no console
+// Impressão da concatenação da string "Resultado da soma : " com o valor de 'a', " com ", o valor de 'b', " é " e o valor de 'res' no console
+// Aqui, o operador '+' é usado para concatenar strings e variáveis em uma única string
 console.log("Resultado da soma : " + a + " com " + b + " é " + res);
