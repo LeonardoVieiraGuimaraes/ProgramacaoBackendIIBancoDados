@@ -17,3 +17,6 @@ http
   .listen(1010);
 
 console.log("Servidor rodando em http://localhost:1010/");
+
+// execute no terminal dentro da pasta ex01/projetoEscola:
+// node index.js
