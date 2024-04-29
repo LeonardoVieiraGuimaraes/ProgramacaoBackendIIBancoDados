@@ -1,8 +1,0 @@
-Node.js: JavaScript, Variáveis e Operadores
-
-
-instalar node
-
-node -v 
-
-node
