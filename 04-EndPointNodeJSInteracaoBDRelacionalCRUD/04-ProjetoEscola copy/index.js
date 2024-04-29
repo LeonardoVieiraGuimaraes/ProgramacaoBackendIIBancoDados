@@ -46,9 +46,6 @@ server.listen(porta, host, () => {
   // Busca todos os alunos do banco de dados.
   aluno.getAlunos(connection);
 
-  // Imprime o resultado no console.
-  console.log(aluno);
-
   // Fecha a conexão com o banco de dados.
   conexaoBD.fecharConexao(connection);
 });

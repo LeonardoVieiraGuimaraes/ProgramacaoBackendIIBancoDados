@@ -27,8 +27,6 @@ class Aluno {
 
         // Se a query for executada com sucesso, converte o resultado para JSON e resolve a Promise.
         const jsonAlunos = JSON.stringify(rows);
-
-        // Resolve a Promise com o resultado.
         return resolve(jsonAlunos);
       });
     });

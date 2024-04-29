@@ -1,8 +1,8 @@
 // Importa a classe ConexaoBD.
-const ConexaoBD = require("./conexaoBD");
+const ConexaoBD = require("../../conectaBD");
 
 // Importa a classe Aluno.
-const Aluno = require("./Aluno");
+const Aluno = require("../Aluno");
 
 // Define a função assíncrona validarRequisicao.
 async function validarRequisicao(request, response) {
