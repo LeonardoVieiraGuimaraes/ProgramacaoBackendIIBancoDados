@@ -1,29 +1,32 @@
-// Importando os módulos necessários
-const http = require("http"); // Importando o módulo http do Node.js
-const RequisicaoService = require("./Servicos/RequisicaoService"); // Importando a classe RequisicaoService do módulo requisicaoservice
+// index.js
+const db = require("./conectaBD.js");
 
-// Definindo a porta e o host para o servidor
-const porta = 4123;
-const host = "localhost";
+(async () => {
+  try {
+    await db.conecta();
+    console.log("Conexão com o banco de dados estabelecida com sucesso!");
+    // Inserir aluno
+    const carlos = { nome: "Carlos", turma: "A", telefone: "123456789" };
+    await db.inserirAluno(carlos);
+    console.log("Aluno inserido com sucesso!");
 
-// Criando o servidor HTTP
-const servidor = http.createServer((request, response) => {
-  // Criando uma nova instância da classe RequisicaoService
-  const requisicaoService = new RequisicaoService();
+    // Alterar aluno
+    const alunoAlterado = { id: 1, telefone: "987654321" };
+    await db.alterarAluno(alunoAlterado);
+    console.log("Aluno alterado com sucesso!");
 
-  // Chamando o método validarRequisicao da classe RequisicaoService
-  requisicaoService.validarRequisicao(request, response);
+    // Excluir aluno
+    const id = 1;
+    await db.excluirAluno(id);
+    console.log(`Aluno com id ${id} excluído com sucesso!`);
 
-  // Definindo o cabeçalho da resposta
-  response.writeHead(200, {
-    "Content-Type": "text/plain",
-  });
-
-  // Encerrando a resposta
-  response.end();
-});
-
-// Iniciando o servidor
-servidor.listen(porta, host, () => {
-  console.log("O nosso servidor está rodando!");
-});
+    // Mostrar todos os alunos
+    const alunos = await db.todosAlunos();
+    console.log("Alunos no banco de dados:", alunos);
+  } catch (err) {
+    console.error(
+      "Falha ao conectar realizar operação no banco de dados:",
+      err
+    );
+  }
+})();
