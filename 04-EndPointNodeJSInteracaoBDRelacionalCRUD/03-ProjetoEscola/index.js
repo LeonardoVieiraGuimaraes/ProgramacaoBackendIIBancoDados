@@ -11,8 +11,15 @@ const db = require("./conectaBD.js");
     // Criando um objeto aluno para inserção
     const carlos = { nome: "Carlos", turma: "A", telefone: "123456789" };
 
+    // Criando um objeto aluno para inserção
+    const leonardo = { nome: "leonardo", turma: "A", telefone: "123456789" };
+    // Criando um objeto aluno para inserção
+    const refael = { nome: "Carlos", turma: "b", telefone: "123456789" };
+
     // Inserindo o aluno no banco de dados
     await db.inserirAluno(carlos);
+    await db.inserirAluno(leonardo);
+    await db.inserirAluno(refael);
     console.log("Aluno inserido com sucesso!");
 
     // Criando um objeto aluno para alteração

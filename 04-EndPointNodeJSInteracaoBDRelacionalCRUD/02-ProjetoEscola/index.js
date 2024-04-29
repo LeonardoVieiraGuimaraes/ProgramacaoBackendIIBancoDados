@@ -3,7 +3,7 @@ const http = require("http");
 
 // Define a porta e o host que o servidor deve usar.
 const porta = 4123;
-const host = "localhost";
+const host = "127.0.0.1";
 
 // Cria um novo servidor HTTP.
 // A função passada para 'createServer' é chamada cada vez que o servidor recebe uma nova solicitação HTTP.
@@ -14,7 +14,7 @@ const server = http.createServer((request, response) => {
   // Verifica a URL da solicitação e responde de acordo.
   if (request.url === "/") {
     // Se a URL da solicitação for '/', escreve a string "Ola Mundo! Teste Funcionando..." no corpo da resposta HTTP.
-    response.write("Ola Mundo! Teste Funcionando...");
+    response.write("<h1>Ola Mundo! Teste Funcionando...</h1>");
   } else if (request.url === "/loja") {
     // Se a URL da solicitação for '/loja', escreve a string "Minha Loja" no corpo da resposta HTTP.
     response.write("<h1>Minha Loja<h1>");

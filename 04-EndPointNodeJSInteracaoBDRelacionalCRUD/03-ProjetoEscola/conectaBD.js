@@ -8,9 +8,9 @@ async function conecta() {
   const con = await mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "",
+    password: "270414",
     database: "escola",
-    port: 3306,
+    port: 3307,
   });
 
   // console.log("Conexão efetuada com sucesso!");
