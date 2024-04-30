@@ -1,5 +1,5 @@
 {
-  "name": "tema07",
+  "name": "projetoescolamongo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "formidable": "^3.5.1",
-    "minimist": "^1.2.8",
     "mongoose": "^8.3.3"
   }
 }

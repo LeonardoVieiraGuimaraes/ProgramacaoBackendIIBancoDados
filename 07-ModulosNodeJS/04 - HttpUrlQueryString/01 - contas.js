@@ -45,9 +45,9 @@ http
     });
   })
   // O servidor começa a ouvir na porta 8080
-  .listen(8080, () => {
+  .listen(1010, () => {
     // Imprime a URL no console quando o servidor começa a ouvir
-    console.log("Server running at http://localhost:8080/");
+    console.log("Server running at http://localhost:1010/");
   });
 
 // Abre na porta 8080 http://localhost:8080/
