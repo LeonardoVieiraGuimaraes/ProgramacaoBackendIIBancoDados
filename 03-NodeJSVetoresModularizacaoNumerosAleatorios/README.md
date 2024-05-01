@@ -48,3 +48,10 @@ Os arquivos JavaScript neste repositório podem ser executados usando o Node.js.
     node 08_operadores_exemplo.js
 
 Lembre-se de substituir caminho/para/a/pasta/NodeJSJavaScriptVariavesOperadores pelo caminho real para a pasta no seu sistema.
+
+
+const somar = require(‘./modulo-somar.js’);
+
+console.log(somar.soma(5, 2));
+
+console.log(somar.soma(3, 9));
