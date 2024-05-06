@@ -1,0 +1,22 @@
+npm install express --save
+
+node app.js
+
+localhost:4000/
+
+localhost:4000/sobre
+
+npm install -g nodemon
+
+nodemon -v
+
+nodemon app.js
+
+npm install --save mysql2
+
+npm install --save sequelize
+
+npm install --save express-handlebars
+
+
+ "start": "nodemon app.js"
