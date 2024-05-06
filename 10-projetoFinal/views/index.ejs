@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Define o título da página -->
+    <title>Alunos</title>
+
+    <!-- Adiciona o CSS do Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Link para adicionar um novo aluno -->
+    <a href="/add" class="btn btn-primary">Adicionar Aluno</a>
+
+    <!-- Lista de alunos -->
+    <ul class="list-group">
+      <!-- Loop através de cada aluno -->
+      <% alunos.forEach(aluno => { %>
+      <li class="list-group-item">
+        <!-- Exibe o nome e a matrícula do aluno -->
+        <%= aluno.nome %> - <%= aluno.matricula %>
+
+        <!-- Link para editar o aluno -->
+        <a href="/edit/<%= aluno.id %>" class="btn btn-warning">Editar</a>
+
+        <!-- Link para deletar o aluno -->
+        <a href="/delete/<%= aluno.id %>" class="btn btn-danger">Deletar</a>
+      </li>
+      <% }); %>
+    </ul>
+
+    <!-- Adiciona o JavaScript do Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
