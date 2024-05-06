@@ -35,7 +35,7 @@ server.listen(porta, host, () => {
   console.log("O nosso servidor está rodando!");
 
   // Cria uma nova instância da classe Aluno.
-  const aluno = new Aluno("João", 30);
+  const aluno = new Aluno("João", "B", "123456789");
 
   // Cria uma nova instância da classe ConexaoBD.
   const conexaoBD = new ConexaoBD();
@@ -45,9 +45,6 @@ server.listen(porta, host, () => {
 
   // Busca todos os alunos do banco de dados.
   aluno.getAlunos(connection);
-
-  // Imprime o resultado no console.
-  console.log(aluno);
 
   // Fecha a conexão com o banco de dados.
   conexaoBD.fecharConexao(connection);

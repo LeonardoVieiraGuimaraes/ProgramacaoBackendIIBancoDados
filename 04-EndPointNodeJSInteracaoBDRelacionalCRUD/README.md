@@ -126,3 +126,9 @@ No Node.js, você pode interagir com um banco de dados MySQL usando um módulo c
         connection.end();
     ```
 Lembre-se de substituir 'seu_usuario' e 'sua_senha' com seu nome de usuário e senha do MySQL.
+
+INSERT INTO Alunos (nome, idade) VALUES ('João', 20);
+INSERT INTO Alunos (nome, idade) VALUES ('Maria', 22), ('Pedro', 25), ('Ana', 23), ('Carlos', 24);
+INSERT INTO Alunos (nome, idade) VALUES ('Fernando', NULL);
+INSERT INTO Alunos (nome, idade) VALUES ('Lucas', 26);
+SELECT LAST_INSERT_ID();

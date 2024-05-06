@@ -1,22 +1,13 @@
 // Define a classe Aluno.
 class Aluno {
   // Define o construtor da classe.
-  constructor(nome, turma, telefone) {
-    this.nome = nome; // Define a propriedade nome.
-    this.turma = turma; // Define a propriedade turma.
-    this.telefone = telefone; // Define a propriedade telefone.
-  }
-
-  // Define o método cumprimentar.
-  cumprimentar() {
-    // Retorna uma saudação que inclui o nome do aluno.
-    return `Olá, meu nome é ${this.nome}`;
-  }
+  constructor() {}
 
   // Define o método getAlunos como uma função assíncrona.
   async getAlunos(connection) {
     // Retorna uma nova Promise.
     return new Promise((resolve, reject) => {
+      let jsonAlunos = "";
       // Executa uma query SQL para buscar todos os alunos.
       connection.query("SELECT * FROM alunos", (err, rows) => {
         if (err) {
@@ -26,7 +17,9 @@ class Aluno {
         }
 
         // Se a query for executada com sucesso, converte o resultado para JSON e resolve a Promise.
-        const jsonAlunos = JSON.stringify(rows);
+        jsonAlunos = JSON.stringify(rows);
+
+        // Resolve a Promise com o resultado.
         return resolve(jsonAlunos);
       });
     });

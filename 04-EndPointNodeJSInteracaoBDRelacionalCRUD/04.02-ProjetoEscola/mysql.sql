@@ -13,3 +13,40 @@ CREATE TABLE alunos (
 
 -- Seleciona todos os registros da tabela "alunos"
 SELECT * FROM alunos;
+
+
+
+CREATE DATABASE escola;
+USE escola;
+
+-- CREATE TABLE alunos (
+--   id INT AUTO_INCREMENT PRIMARY KEY,
+--   nome VARCHAR(255),
+--   turma VARCHAR(255),
+--   telefone VARCHAR(255)
+-- );
+
+CREATE DATABASE escola;
+USE escola;
+
+INSERT INTO alunos (nome, turma, telefone) VALUES ('João', 'Turma A', '123456789');
+INSERT INTO alunos (nome, turma, telefone) VALUES ('Maria', 'Turma B', '987654321');
+INSERT INTO alunos (nome, turma, telefone) VALUES ('Carlos', 'Turma C', '456789123');
+
+
+CREATE DATABASE escola;
+USE escola;
+
+CREATE TABLE alunos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(255),
+  turma VARCHAR(255),
+  telefone VARCHAR(255)
+);
+
+CREATE DATABASE escola;
+USE escola;
+
+INSERT INTO alunos (nome, turma, telefone) VALUES ('João', 'Turma A', '123456789');
+INSERT INTO alunos (nome, turma, telefone) VALUES ('Maria', 'Turma B', '987654321');
+INSERT INTO alunos (nome, turma, telefone) VALUES ('Carlos', 'Turma C', '456789123');
