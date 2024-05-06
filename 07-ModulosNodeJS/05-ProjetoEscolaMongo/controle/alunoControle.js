@@ -2,7 +2,7 @@ const dadosServicos = require("../servicos/dadosServico");
 
 exports.consultarTodos = async (req, res) => {
   try {
-    const dados = await dadosServicos.consultarTodosDados();
+    const dados = await dadosServicos.consutarTodos();
     res.send(dados);
   } catch (error) {
     res.status(500).send({ message: error.message });
