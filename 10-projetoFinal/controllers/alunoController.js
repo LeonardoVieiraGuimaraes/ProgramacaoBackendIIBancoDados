@@ -46,5 +46,11 @@ exports.update = async (req, res) => {
 
 // Função assíncrona para deletar um aluno
 exports.delete = async (req, res) => {
-  // O código para deletar o aluno vai aqui
+  // Deleta o aluno com o ID passado como parâmetro na URL
+  await Aluno.destroy({
+    where: { id: req.params.id },
+  });
+
+  // Redireciona para a página inicial
+  res.redirect("/");
 };

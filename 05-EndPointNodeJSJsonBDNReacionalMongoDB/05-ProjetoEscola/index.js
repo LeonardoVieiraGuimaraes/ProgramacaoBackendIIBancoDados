@@ -12,7 +12,7 @@ const sistema = express();
 
 // Conecta-se ao banco de dados MongoDB usando Mongoose.
 mongoose
-  .connect("mongodb+srv://root:root@clustere.rolmxzm.mongodb.net/")
+  .connect("mongodb://localhost:27017/")
   .then(() => {
     // Se a conexão for bem-sucedida, imprime uma mensagem no console.
     console.log("Conexão efetuada com sucesso!");
@@ -29,5 +29,5 @@ sistema.use(express.json());
 // Faz o servidor começar a escutar por conexões na porta especificada.
 // A função passada para 'listen' é chamada uma vez que o servidor esteja pronto para aceitar conexões.
 sistema.listen(PORT, () => {
-  console.log("O servidor está rodando!");
+  console.log(`O servidor está rodando local http://localhost:${PORT}`);
 });
